@@ -1,9 +1,9 @@
 {
-  "name": "redux-simple-starter",
+  "name": "YT-api-search-app",
   "version": "1.0.0",
-  "description": "Simple starter package for Redux with React and Babel support",
+  "description": "Simple App working with YouTube API",
   "main": "index.js",
-  "repository": "https://github.com/dariodari0/yt-api-search.git",
+  "repository": "https://github.com/dariodari0/YT-api-search-app.git",
   "scripts": {
     "start": "node ./node_modules/webpack-dev-server/bin/webpack-dev-server.js",
     "test": "mocha --compilers js:babel-core/register --require ./test/test_helper.js --recursive ./test",
