@@ -6,7 +6,8 @@
     "repository": "git@github.com:dariodari0/yt-api-frontend-app.git",
     "scripts": {
         "start": "webpack-dev-server --mode development --open",
-        "build": "webpack --mode production"
+        "build": "webpack --mode production",
+        "server": "node server.js"
     },
     "author": "DarMar",
     "license": "ISC",
