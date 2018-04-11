@@ -1,5 +1,7 @@
 /node_modules
 .jsbeautifyrc
 .babelrc
-webpack.config.js
 .DS_Store
+Procfile
+server.js
+/dist
