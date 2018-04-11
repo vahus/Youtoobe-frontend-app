@@ -1,8 +1,5 @@
 /node_modules
-bundle.js
-npm-debug.log
+.jsbeautifyrc
+.babelrc
+webpack.config.js
 .DS_Store
-
-# IntelliJ
-*.iml
-/.idea
