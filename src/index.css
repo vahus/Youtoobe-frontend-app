@@ -1,10 +1,10 @@
 .search-input {
-    margin: 20px;
-    text-align: center;
+    margin: 30px 0;
 }
 
-.search-input input {
-    width: 75%;
+#search-button:hover {
+    background-color: red;
+    color: #FFF;
 }
 
 .list-grop-item {
@@ -12,7 +12,7 @@
     padding-right: 10px;
     list-style: none;
     cursor: pointer;
-    border: 1px solid #DDD;
+    border: 1px solid #ddd;
     font-family: 'Lato', sans-serif;
 }
 

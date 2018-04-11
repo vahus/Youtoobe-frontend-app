@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import YTSearch from 'youtube-api-search';
+import _ from 'lodash';
 import 'bootstrap/scss/bootstrap.scss';
 import style from "./index.css";
 import { Animated } from "react-animated-css";
@@ -8,7 +9,7 @@ import WebFont from 'webfontloader';
 
 WebFont.load({
   google: {
-    families: ['Open Sans Condensed:300', 'sans-serif', 'Lato']
+    families: [ 'Open Sans Condensed:300', 'sans-serif', 'Lato' ]
   }
 });
 
@@ -27,20 +28,24 @@ class App extends Component {
       videoSelected: null
     };
 
+    this.VideoSearchFunc( 'redux' );
+  }
+
+  VideoSearchFunc( term ) {
     YTSearch({
       key: API_KEY,
-      term: 'react app'
+      term: term
     }, ( videos ) => {
       this.setState({videos: videos, videoSelected: videos[0]})
     });
-
   }
 
   render( ) {
+    const videosListFounded = _.debounce((term) => {this.VideoSearchFunc(term)}, 300);
     return (
       <div className="container">
         <Animated animationIn="fadeInUp" animationOut="fadeOut" isVisible={true}>
-          <SearchInput/>
+          <SearchInput onInputChange={videosListFounded}/>
           <div className="row">
             <VideoPlayer video={this.state.videoSelected}/>
             <VideoList

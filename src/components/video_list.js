@@ -4,6 +4,7 @@ import VideoListItem from './video_list_item';
 const VideoList = ( props ) => {
     const videoItems = props
         .videos
+        .slice(1)
         .map(( item ) => {
             return ( <VideoListItem
                 onVideoSelect={props.onVideoSelect}
