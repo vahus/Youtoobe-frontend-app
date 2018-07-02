@@ -6,3 +6,5 @@ npm start
 
 
 Deployed on Heroku: https://youtoobe-browser.herokuapp.com/
+
+The code used on http://www.obscurab.us/movies for dynamically generate clips from a specify playlist from Youtube.
